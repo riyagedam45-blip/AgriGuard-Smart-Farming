@@ -1,0 +1,16 @@
+{
+  "name": "agriguard",
+  "version": "1.0.0",
+  "description": "AgriGuard Full Stack Application",
+  "scripts": {
+    "install": "npm run install-all",
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "dev": "npm run dev:all",
+    "dev:all": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
